@@ -1,0 +1,94 @@
+/* general style  */
+body{
+	background-image:  url(background.jpg) ;
+	background-size: 100%;
+	
+}
+/* for the heading 'time is running' */
+h1{
+	text-align: center;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-size: 1.5rem;
+}
+/* for clock image */
+#clock {
+	position: relative;
+	margin: auto;
+	height: 22vw;
+	padding-bottom: ;
+	/*to make the height and width responsive*/
+	width: 21vw;
+	background: url(Clock.png) no-repeat;
+	/*setting our background image*/
+	background-size: 100%;
+	border-radius: 50%;
+}
+/* general properties for the stick to be rotated */
+#hourstick,
+#minutestick,
+#secondstick {
+	position: absolute;
+	background: rgb(219, 38, 38);
+	border-radius: 10px;
+	transform-origin: bottom;
+}
+/* specific position for the sticks  */
+#hourstick {
+	width: 2%;
+	height: 29%;
+	top: 23%;
+	left: 50%;
+	opacity: 0.8;
+}
+
+#minutestick {
+	width: 1.6%;
+	height: 35%;
+	top: 16%;
+	left: 50%;
+	opacity: 0.8;
+}
+
+#secondstick {
+	width: 1%;
+	height: 32%;
+	top: 19%;
+	left: 50%;
+	opacity: 0.8;
+}
+/* for set alarm, Stop & Snooze button display */
+#setter,#option{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* set alarm btn */
+#setter button{
+	margin-left: 15px;
+}
+/* for Stop & Snooze button display */
+#option button{
+	background-color:black ;
+	
+	margin-left: 15px;
+}
+/* list of alarm */
+#Alarm_List{
+	color: rgb(0, 0, 0);
+	text-align: center;
+	list-style-type:none;
+}
+/* adding style to buttons */
+#setbtn{
+	background-color:black ;
+	font-weight: 800;
+}
+#delete-button{
+	background-color:black ;
+	height: 50%;
+	padding: 2px;
+	margin-top: 2px;
+}
+ul.alarmlist{
+	list-style-type:none;
+}

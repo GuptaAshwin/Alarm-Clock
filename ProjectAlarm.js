@@ -8,8 +8,14 @@ setInterval(() => {
     d = new Date(); //object of date()
     hr = d.getHours();                //object of hours,minute and seconds
     min = d.getMinutes();                 
-    sec = d.getSeconds();                      
-    let time = `${hr}:${min}:${sec}`;        //creating time in format to match with arraylist        
+    sec = d.getSeconds();
+    
+    hr=(hr<10) ? "0" + hr : hr;
+    min=(min<10) ? "0" + min : min;
+    sec=(sec<10) ? "0" + sec : sec;
+
+    let time = hr +":"+min +":"+sec;  
+          //creating time in format to match with arraylist        
     hr_rotation = 30 * hr + min / 2; //converting current time
     min_rotation = 6 * min;
     sec_rotation = 6 * sec;
@@ -19,6 +25,7 @@ setInterval(() => {
     secondstick.style.transform = `rotate(${sec_rotation}deg)`;
 // iniating alarm if alarm time matches in the list 
     for (let i = 0; i < alarm_list.length; i++) {   
+        
         if (alarm_list[i] === time) {
             initiateAlarm();       
         }
@@ -28,6 +35,7 @@ setInterval(() => {
 
 //function for sound playing
 function initiateAlarm() {
+   
     alarmsound.play();
     document.getElementById('option').style.display = '';
 }
